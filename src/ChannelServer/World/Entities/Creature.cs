@@ -2408,6 +2408,14 @@ namespace Aura.Channel.World.Entities
 				ap += statUp.AP;
 			}
 
+			//wangbin-begin
+			//开发者年龄增长额外获得10AP
+			if(this.Titles.IsUsable(TitleId.devCAT))
+			{
+				ap += 10;
+			}
+			//wangbin-end
+
 			// Apply stat bonuses
 			this.LifeMaxBase += life;
 			this.Life += life;
